@@ -1,0 +1,25 @@
+.container{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: gray;
+    width: fit-content;
+    margin-left: 40%;
+    margin-top: 40px;
+}
+
+#titleInput{
+    width: 200px;
+    height: 40px;
+}
+
+#descriptionInput{
+    height: 80px;
+}
+
+#submitButton{
+    padding: 16px;
+    background-color: black;
+    color: yellow;
+    margin: 20px;
+};
