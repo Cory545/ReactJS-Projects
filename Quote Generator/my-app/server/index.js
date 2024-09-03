@@ -6,6 +6,10 @@ app.get('/', (req, res) => {
   res.send('Hello from Node.js!');
 });
 
+app.get('/submit', (req, res) => {
+  console.log("")
+});
+
 app.listen(port, () => {
   console.log(`Server listening on port   
  ${port}`);
