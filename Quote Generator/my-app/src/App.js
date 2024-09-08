@@ -1,12 +1,25 @@
-import Header from './header';
-import Form from './form';
 import './App.css';
 
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+
 function App() {
+  const [data, setData] = useState('');
+
+  useEffect(() => {
+    axios.get('/api/data')
+      .then(response => {
+        setData(response.data.message);
+      })
+      .catch(error => {
+        console.error(error);
+      });
+  }, []);
+
   return (
     <div className="App">
-      <Header />
-      <Form />
+      <h1>React and Node.js Integration</h1>
+      <p>Message from the server: {data}</p>
     </div>
   );
 }

@@ -1,16 +1,13 @@
-const express = require('express');
+import express from "express";
 const app = express();
 const port = 3000;
 
-app.get('/', (req, res) => {
-  res.send('Hello from Node.js!');
-});
-
-app.get('/submit', (req, res) => {
-  console.log("")
+app.get('/api/data', (req, res) => {
+  // Handle your API logic here
+  const data = { message: 'Hello from the server!' };
+  res.json(data);
 });
 
 app.listen(port, () => {
-  console.log(`Server listening on port   
- ${port}`);
+  console.log(`Server is running on port ${port}`);
 });
